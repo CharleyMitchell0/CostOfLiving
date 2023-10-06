@@ -1,53 +1,53 @@
-drop table hub
-drop table specialist
+drop table hub;
+drop table specialist;
 
-CREATE TABLE HUB (region VARCHAR(250) PRIMARY KEY, address VARCHAR(250) NOT NULL, phone_number INT NOT NULL)
+CREATE TABLE HUB (region VARCHAR(250) PRIMARY KEY, address VARCHAR(250) NOT NULL, phone_number INT NOT NULL);
 
-INSERT INTO HUB VALUES ('m', '10 New Steet, Birmingham, BM12 7AB', 02055588839)
-INSERT INTO HUB VALUES ('ne', '1 Clayton Street, Newcastle, NC10 1AB', 02055588833)
-INSERT INTO HUB VALUES ('nw', '50 Church Street, Liverpool, LP05 RB', 02055588834)
-INSERT INTO HUB VALUES ('sw', '100 Corn Street, Bristol, BL25 4HR', 0205588844)
-INSERT INTO HUB VALUES ('se', '250 Bishopsgate, London, E1CM 1AB', 02055588834)
+INSERT INTO HUB VALUES ('m', '10 New Steet, Birmingham, BM12 7AB', 02055588839);
+INSERT INTO HUB VALUES ('ne', '1 Clayton Street, Newcastle, NC10 1AB', 02055588833);
+INSERT INTO HUB VALUES ('nw', '50 Church Street, Liverpool, LP05 RB', 02055588834);
+INSERT INTO HUB VALUES ('sw', '100 Corn Street, Bristol, BL25 4HR', 0205588844);
+INSERT INTO HUB VALUES ('se', '250 Bishopsgate, London, E1CM 1AB', 02055588834);
 
-CREATE TABLE SPECIALIST (id INT AUTO_INCREMENT PRIMARY KEY, first_name VARCHAR(250) NOT NULL, last_name VARCHAR(250) NOT NULL, email VARCHAR(250) DEFAULT NULL, speciality VARCHAR(250) NOT NULL, region VARCHAR(250) NOT NULL, FOREIGN KEY (region) REFERENCES HUB(region))
+CREATE TABLE SPECIALIST (id INT AUTO_INCREMENT PRIMARY KEY, first_name VARCHAR(250) NOT NULL, last_name VARCHAR(250) NOT NULL, email VARCHAR(250) DEFAULT NULL, speciality VARCHAR(250) NOT NULL, region VARCHAR(250) NOT NULL, FOREIGN KEY (region) REFERENCES HUB(region));
 
 
-INSERT INTO SPECIALIST VALUES (20, 'Jasmine', 'Thadani', 'Jasmine@HampsterBank.com', 'Energy Bills', 'nw')
-INSERT INTO SPECIALIST VALUES (19, 'Shereen', 'Lengthorn', 'Shereen@HampsterBank.com', 'Energy Bills', 'ne')
-INSERT INTO SPECIALIST VALUES (18, 'Sunnia', 'Javid', 'Sunnia@HampsterBank.com', 'Energy Bills' , 'm')
-INSERT INTO SPECIALIST VALUES (17, 'Mo', 'Warsame', 'Mo@HampsterBank.com', 'Energy Bills', 'sw')
-INSERT INTO SPECIALIST VALUES (16, 'Adam', 'Willerton', 'Adam@HampsterBank.com', 'Energy Bills', 'se')
-INSERT INTO SPECIALIST VALUES (15, 'Rabs', 'Khan', 'Rabbs@HampsterBank.com', 'Budget & Spending', 'ne')
-INSERT INTO SPECIALIST VALUES (14, 'Mobina', 'Mahmood', 'Mobina@HampsterBank.com', 'Budget & Spending', 'nw')
-INSERT INTO SPECIALIST VALUES (13, 'Gareth', 'Butlin', 'Gareth@HampsterBank.com', 'Budget & Spending', 'm')
-INSERT INTO SPECIALIST VALUES (12, 'Chris', 'Benson', 'Chris@HampsterBank.com', 'Budget & Spending', 'sw')
-INSERT INTO SPECIALIST VALUES (11, 'Charlotte', 'Seargent', 'Charlotte@HampsterBank.com', 'Budget & Spending', 'se')
-INSERT INTO SPECIALIST VALUES (10, 'Markus', 'Barnes', 'Markus@HampsterBank.com', 'Mental Health & Wellbeing', 'nw')
-INSERT INTO SPECIALIST VALUES (9, 'Charley', 'Mitchell', 'Charley@HampsterBank.com', 'Mental Health & Wellbeing', 'ne')
-INSERT INTO SPECIALIST VALUES (8, 'Justyna', 'Danielewicz', 'Justyna@HampsterBank.com', 'Mental Health & Wellbeing', 'm')
-INSERT INTO SPECIALIST VALUES (7, 'Tessa', 'Hancock', 'Tessa@HampsterBank.com', 'Mental Health & Wellbeing', 'sw')
-INSERT INTO SPECIALIST VALUES (6, 'Antony', 'Lees', 'Jo@HampsterBank.com', 'Debt Management', 'ne')
-INSERT INTO SPECIALIST VALUES (5, 'Madiha', 'Ali', 'Madiha@HampsterBank.com', 'Debt Management', 'nw')
-INSERT INTO SPECIALIST VALUES (4, 'Gergely', 'Krista', 'Gergely@HampsterBank.com', 'Debt Management' , 'm')
-INSERT INTO SPECIALIST VALUES (3, 'Mark', 'Cornick', 'Mark@HampsterBank.com', 'Debt Management', 'sw')
-INSERT INTO SPECIALIST VALUES (2, 'Elaine', 'Collier', 'Elain@HampsterBank.com', 'Debt Management', 'se')
-INSERT INTO SPECIALIST VALUES (1, 'Jo', 'Reece', 'Jo@HampsterBank.com', 'Mental Health & wellbeing', 'se')
+INSERT INTO SPECIALIST VALUES (20, 'Jasmine', 'Thadani', 'Jasmine@HampsterBank.com', 'Energy Bills', 'nw');
+INSERT INTO SPECIALIST VALUES (19, 'Shereen', 'Lengthorn', 'Shereen@HampsterBank.com', 'Energy Bills', 'ne');
+INSERT INTO SPECIALIST VALUES (18, 'Sunnia', 'Javid', 'Sunnia@HampsterBank.com', 'Energy Bills' , 'm');
+INSERT INTO SPECIALIST VALUES (17, 'Mo', 'Warsame', 'Mo@HampsterBank.com', 'Energy Bills', 'sw');
+INSERT INTO SPECIALIST VALUES (16, 'Adam', 'Willerton', 'Adam@HampsterBank.com', 'Energy Bills', 'se');
+INSERT INTO SPECIALIST VALUES (15, 'Rabs', 'Khan', 'Rabbs@HampsterBank.com', 'Budget & Spending', 'ne');
+INSERT INTO SPECIALIST VALUES (14, 'Mobina', 'Mahmood', 'Mobina@HampsterBank.com', 'Budget & Spending', 'nw');
+INSERT INTO SPECIALIST VALUES (13, 'Gareth', 'Butlin', 'Gareth@HampsterBank.com', 'Budget & Spending', 'm');
+INSERT INTO SPECIALIST VALUES (12, 'Chris', 'Benson', 'Chris@HampsterBank.com', 'Budget & Spending', 'sw');
+INSERT INTO SPECIALIST VALUES (11, 'Charlotte', 'Seargent', 'Charlotte@HampsterBank.com', 'Budget & Spending', 'se');
+INSERT INTO SPECIALIST VALUES (10, 'Markus', 'Barnes', 'Markus@HampsterBank.com', 'Mental Health & Wellbeing', 'nw');
+INSERT INTO SPECIALIST VALUES (9, 'Charley', 'Mitchell', 'Charley@HampsterBank.com', 'Mental Health & Wellbeing', 'ne');
+INSERT INTO SPECIALIST VALUES (8, 'Justyna', 'Danielewicz', 'Justyna@HampsterBank.com', 'Mental Health & Wellbeing', 'm');
+INSERT INTO SPECIALIST VALUES (7, 'Tessa', 'Hancock', 'Tessa@HampsterBank.com', 'Mental Health & Wellbeing', 'sw');
+INSERT INTO SPECIALIST VALUES (6, 'Antony', 'Lees', 'Jo@HampsterBank.com', 'Debt Management', 'ne');
+INSERT INTO SPECIALIST VALUES (5, 'Madiha', 'Ali', 'Madiha@HampsterBank.com', 'Debt Management', 'nw');
+INSERT INTO SPECIALIST VALUES (4, 'Gergely', 'Krista', 'Gergely@HampsterBank.com', 'Debt Management' , 'm');
+INSERT INTO SPECIALIST VALUES (3, 'Mark', 'Cornick', 'Mark@HampsterBank.com', 'Debt Management', 'sw');
+INSERT INTO SPECIALIST VALUES (2, 'Elaine', 'Collier', 'Elain@HampsterBank.com', 'Debt Management', 'se');
+INSERT INTO SPECIALIST VALUES (1, 'Jo', 'Reece', 'Jo@HampsterBank.com', 'Mental Health & wellbeing', 'se');
 
 UPDATE specialist 
 SET speciality = 'mhw'
-WHERE speciality = 'Mental Health & Wellbeing' OR speciality = 'Mental Health & wellbeing'
+WHERE speciality = 'Mental Health & Wellbeing' OR speciality = 'Mental Health & wellbeing';
 
  UPDATE specialist 
 SET speciality = 'dm'
-WHERE speciality = 'Debt Management'
+WHERE speciality = 'Debt Management';
 
  UPDATE specialist 
 SET speciality = 'bs'
-WHERE speciality = 'Budget & Spending'
+WHERE speciality = 'Budget & Spending';
 
  UPDATE specialist 
 SET speciality = 'eb'
-WHERE speciality = 'Energy Bills'
+WHERE speciality = 'Energy Bills';
 
 
 
