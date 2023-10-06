@@ -1,5 +1,5 @@
-drop table hub;
 drop table specialist;
+drop table hub;
 
 CREATE TABLE HUB (region VARCHAR(250) PRIMARY KEY, address VARCHAR(250) NOT NULL, phone_number INT NOT NULL);
 
